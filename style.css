@@ -1,0 +1,243 @@
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b12;
+    color: #eeeeee;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+
+header {
+    background: #11111b;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #29293a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+header h1::first-letter {
+    color: #8b5cf6;
+}
+
+/* ===== MENU ===== */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #b8b8c7;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #8b5cf6;
+}
+
+/* ===== CONTEÚDO ===== */
+
+main {
+    width: 84%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+/* ===== SEÇÕES ===== */
+
+section,
+article {
+    background: #14141f;
+    border: 1px solid #252536;
+    border-radius: 14px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+section h2,
+article h2 {
+    font-size: 25px;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+/* Linha decorativa nos títulos */
+
+section h2::after,
+article h2::after,
+aside h2::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background: #8b5cf6;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+
+/* ===== JOGOS ===== */
+
+#jogos p {
+    background: #1b1b29;
+    border: 1px solid #29293c;
+    padding: 16px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    color: #d8d8e2;
+    transition: 0.3s;
+}
+
+#jogos p:hover {
+    border-color: #8b5cf6;
+    background: #20202f;
+    transform: translateX(6px);
+}
+
+/* ===== GÊNEROS ===== */
+
+#generos ul {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+#generos li {
+    background: #1d1d2a;
+    border: 1px solid #353548;
+    color: #cfcfe0;
+    padding: 9px 20px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+#generos li:hover {
+    background: #8b5cf6;
+    border-color: #8b5cf6;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* ===== JOGOS EM DESTAQUE ===== */
+
+article p {
+    display: inline-block;
+    background: #1b1b29;
+    border: 1px solid #29293c;
+    padding: 18px 22px;
+    margin: 7px;
+    border-radius: 10px;
+    color: #ddddE8;
+    transition: 0.3s;
+}
+
+article p:hover {
+    background: #8b5cf6;
+    border-color: #8b5cf6;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.25);
+}
+
+/* ===== PROMOÇÕES ===== */
+
+aside {
+    width: 84%;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 30px;
+    background: linear-gradient(135deg, #151522, #191526);
+    border: 1px solid #392b5c;
+    border-radius: 14px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+aside h2 {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+aside p {
+    background: #20202d;
+    border-left: 4px solid #8b5cf6;
+    padding: 15px 18px;
+    margin: 12px 0;
+    border-radius: 7px;
+    color: #dedee8;
+    transition: 0.3s;
+}
+
+aside p:hover {
+    background: #272738;
+    transform: translateX(5px);
+}
+
+/* ===== RODAPÉ ===== */
+
+footer {
+    background: #08080d;
+    border-top: 1px solid #242431;
+    text-align: center;
+    padding: 35px;
+    color: #858593;
+}
+
+footer p {
+    margin: 6px;
+}
+
+footer p:first-child {
+    color: #bdbdcc;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    main,
+    aside {
+        width: 92%;
+    }
+
+    section,
+    article,
+    aside {
+        padding: 22px;
+    }
+
+    article p {
+        display: block;
+        margin: 10px 0;
+    }
+}
